@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: linear-gradient(to right, #fc3576, #fb345f);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 50rem;
+}
+
+.card-image {
+  width: 34rem;
+  display: inline-block;
+}
