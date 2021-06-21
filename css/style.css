@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+/* * {
+  border: 3px dashed green;
+} */
+
 html {
   font-size: 10px;
 }
@@ -18,11 +22,140 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  width: 50rem;
+.card {
+  width: 72rem;
+  display: flex;
 }
 
 .card-image {
   width: 34rem;
   display: inline-block;
+  box-shadow: 15px 5px 10px 0px rgb(0 0 0 / 50%);
+  position: relative;
+  z-index: 999;
+}
+
+.card-box {
+  width: 37rem;
+  height: 45rem;
+  align-self: flex-end;
+  background: url("../images/x-men-poster-faded.jpg");
+  background-color: rgb(25, 25, 25);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position-y: -20rem;
+  background-size: 190%;
+  padding: 5rem;
+  position: relative;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 50%);
+}
+
+.card-box::before,
+.card-box::after {
+  content: "<";
+  font-family: "DreamOrphans";
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  color: #fff;
+  height: 4rem;
+  width: 10rem;
+  background-color: rgb(250, 85, 130);
+  display: inline-block;
+  position: absolute;
+  top: -4rem;
+  left: 40%;
+  cursor: pointer;
+}
+.card-box::after {
+  content: ">";
+  left: 70%;
+}
+
+.card-box-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-box-top-heading {
+  font-family: "KeepCalm";
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+.card-box-top-rating {
+  font-family: "DreamOrphans";
+  font-size: 2.5rem;
+  color: rgb(250, 212, 5);
+}
+
+.card-box-top-rating span {
+  font-size: 4rem;
+}
+
+.card-box-subheading {
+  font-family: "Kiona";
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: rgb(160, 160, 160);
+  margin-bottom: 4rem;
+}
+
+.card-box-description {
+  font-family: "Kiona";
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: bold;
+  color: rgb(130, 130, 130);
+  margin-bottom: 10rem;
+}
+
+.card-box-bottom {
+  font-family: "Sequel";
+  font-size: 1.6rem;
+  letter-spacing: 1.3px;
+  color: rgb(130, 130, 130);
+}
+
+.card-box-bottom-left,
+.card-box-bottom-right {
+  display: inline-block;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.card-box-bottom-left {
+  padding-left: 3rem;
+  position: relative;
+}
+
+.card-box-bottom-left::before {
+  content: "+";
+  font-family: "DreamOrphans";
+  font-size: 4.2rem;
+  line-height: 1.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-box-bottom-left:hover,
+.card-box-bottom-left:hover::before {
+  color: #fff;
+}
+
+.card-box-bottom-right {
+  color: rgb(30, 35, 40);
+  background-color: rgb(250, 212, 5);
+  white-space: pre;
+  position: absolute;
+  left: 65%;
+  transition: all 0.3s ease;
+}
+
+.card-box-bottom-right:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
 }
